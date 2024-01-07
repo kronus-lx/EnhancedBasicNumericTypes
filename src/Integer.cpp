@@ -18,6 +18,11 @@ Integer& Integer::operator=(const Integer& integer) noexcept {
     return *this;
 }
 
+Integer& Integer::operator=(int c_type_integer) noexcept {
+    this->_c_type_integer = c_type_integer;
+    return *this;
+}
+
 int Integer::value() const {
     return this->_c_integer;
 }

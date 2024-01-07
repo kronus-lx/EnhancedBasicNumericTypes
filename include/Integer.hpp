@@ -24,6 +24,11 @@
             * @param instance of Integer class
             */
             Integer& operator=(const Integer &integer) noexcept;
+
+            /**
+            * @brief assingment of primitive integer type
+            */
+            Integer& operator=(int c_type_integer) noexcept;
             
             /**
             * @brief signed value of integer
