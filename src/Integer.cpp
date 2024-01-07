@@ -63,7 +63,7 @@ bool Integer::isPrime() const {
     return isPrime;
 } 
 
-long Integer::Factorial() const {
+long int Integer::Factorial() const {
     int x = _c_integer;
     long factorial = 0;
     for(int i = 1; i <= x; ++i){
