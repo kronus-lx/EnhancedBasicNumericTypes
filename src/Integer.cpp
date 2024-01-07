@@ -71,3 +71,11 @@ long int Integer::Factorial() const {
     }
     return factorial;
 }
+
+float Integer::toFloat() const {
+    return static_cast<float>(_c_integer);
+}
+
+double Integer::toDouble() const {
+    return static_cast<double>(_c_integer);
+}

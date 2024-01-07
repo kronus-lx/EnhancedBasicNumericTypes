@@ -54,4 +54,16 @@
             * @return factorial (long) of provided integer
             */
             long Factorial() const ;
+
+            /**
+            * @brief returns the floating-point version of the respective integer
+            * @return returns (float) version of the integer primitive type
+            */
+            float toFloat() const ;
+
+            /**
+            * @brief returns the double version of the respective integer
+            * @return returns (double) version of the integer primitive type
+            */
+            double toDouble() const ;
     };
