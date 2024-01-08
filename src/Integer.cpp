@@ -20,6 +20,7 @@ Integer& Integer::operator=(const Integer& integer) noexcept {
 
 Integer& Integer::operator=(int c_type_integer) noexcept {
     this->_c_type_integer = c_type_integer;
+    this->_size = sizeof(int);
     return *this;
 }
 
