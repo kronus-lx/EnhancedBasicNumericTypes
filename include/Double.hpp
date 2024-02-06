@@ -33,8 +33,14 @@ class Double
         *   @param standard cpp int value
         */
         int toPrimitiveInt( ) const ;
-
-        int32_t toInt32() const ;
-
-        int64_t toInt64() const ;
+        /**
+        *   @brief Return as Int32 stdint
+        *   @return int32 type 
+        */
+        int32_t Int32() const ;
+        /**
+        *   @brief Return as Int64 stdint
+        *   @return int64 type 
+        */
+        int64_t Int64() const ;
 };
