@@ -1,6 +1,7 @@
 #pragma once
 
 #include <cinttypes>
+#include <string>
 
 class Double 
 {
@@ -43,4 +44,9 @@ class Double
         *   @return int64 type 
         */
         int64_t Int64() const ;
+        /**
+        *  @brief return a string representation
+        *  @return str of double
+        */
+        std::string str() const ;
 };
