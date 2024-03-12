@@ -1,7 +1,7 @@
 #ifndef __DOUBLE_H__
 #define __DOUBLE_H__
 
-#ifdef _WIN32
+#ifdef _MSC_VER
     #define DOUBLE_API __declspec(dllexport)
 #elif _WIN64
     #define DOUBLE_API __declspec(dllexport)
