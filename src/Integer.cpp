@@ -31,7 +31,7 @@ unsigned int Integer::size() const {
     return this->_size;
 }
 
-std::string_view Integer::binary() const {
+const char* Integer::binary() const {
     std::string strOutput;
     std::vector<unsigned char> binary;   
     int v = _c_integer;
@@ -47,10 +47,8 @@ std::string_view Integer::binary() const {
     for(auto i = binary.begin(); i != binary.end(); i++){
         strOutput += std::to_string(*i);
     }
-    
-    std::string_view output = strOutput;
 
-    return output;
+    return strOutput.c_str();
 } 
 
 bool Integer::isPrime() const {
