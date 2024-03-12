@@ -82,3 +82,7 @@ float Integer::toFloat() const {
 double Integer::toDouble() const {
     return static_cast<double>(_c_integer);
 }
+
+std::string str() const {
+    return "";
+}

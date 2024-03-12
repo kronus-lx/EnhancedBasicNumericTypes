@@ -8,85 +8,93 @@
 #endif
 
 #ifdef __cplusplus
-    #include <string>
+    #include <EnhancedTypes.hpp>
 #endif
-
-/**
+/*********************************************************************
 * @brief Integer Class Encapsulatuing Integer Methods and Attributes
-*/
-class Integer
+*********************************************************************/
+namespace EnhancedTypes
 {
-    private:
-        int _c_integer;
-        unsigned int _size;
-    public:
-        /**
-        *   @brief Standard Constructor invoke new object passing std int value
-        *   @param standard cpp int value
-        */
-        INTEGER_API Integer(int c_type_integer);
-        /**
-        *   @brief Standard Constructor invoke new object passing std int value
-        *   @param instance of Integer class
-        */
-        INTEGER_API Integer(const Integer &integer) noexcept;
-        /**
-        * @brief Assignement operator
-        * @param instance of Integer class
-        */
-        INTEGER_API Integer& operator=(const Integer &integer) noexcept;
+    namespace Numeric
+    {
+        namespace Integer
+        {
+            class Integer : public EnhancedTypes::Numeric::IInteger
+            {       
+                private:
+                    int _c_integer;
+                    unsigned int _size;
+                public:
+                    /**
+                    *   @brief Standard Constructor invoke new object passing std int value
+                    *   @param standard cpp int value
+                    */
+                    Integer(int c_type_integer);
+                    /**
+                    *   @brief Standard Constructor invoke new object passing std int value
+                    *   @param instance of Integer class
+                    */
+                    Integer(const Integer &integer) noexcept;
+                    /**
+                    * @brief Assignement operator
+                    * @param instance of Integer class
+                    */
+                    Integer& operator=(const Integer &integer) noexcept;
 
-        /**
-        * @brief assingment of primitive integer type
-        */
-        INTEGER_API Integer& operator=(int c_type_integer) noexcept;
-        
-        /**
-        * @brief signed value of integer
-        * @return signed value of int
-        */
-        INTEGER_API int value() const ;
-        
-        /**
-        * @brief signed size in bytes
-        * @return signed size in bytes
-        */
-        INTEGER_API unsigned int size() const ;
+                    /**
+                    * @brief assingment of primitive integer type
+                    */
+                    Integer& operator=(int c_type_integer) noexcept;
+                    
+                    /**
+                    * @brief signed value of integer
+                    * @return signed value of int
+                    */
+                    int value() const override ;
+                    
+                    /**
+                    * @brief signed size in bytes
+                    * @return signed size in bytes
+                    */
+                    unsigned int size() const override ;
 
-        /**
-        * @brief string representation of binary value of int
-        * @return string_view (C++17) value of binary value of int
-        */
-        INTEGER_API const char* binary() const ; 
-        
-        /**
-        * @brief is a prime number
-        * @return boolean state (0 if no | 1 if yes )
-        */
-        INTEGER_API bool isPrime() const ;
+                    /**
+                    * @brief string representation of binary value of int
+                    * @return string_view (C++17) value of binary value of int
+                    */
+                    const char* binary() const override ; 
+                    
+                    /**
+                    * @brief is a prime number
+                    * @return boolean state (0 if no | 1 if yes )
+                    */
+                    bool isPrime() const override ;
 
-        /**
-        * @brief returns the factorial of the provided integer
-        * @return factorial (long) of provided integer
-        */
-        INTEGER_API long Factorial() const ;
+                    /**
+                    * @brief returns the factorial of the provided integer
+                    * @return factorial (long) of provided integer
+                    */
+                    long Factorial() const override ;
 
-        /**
-        * @brief returns the floating-point version of the respective integer
-        * @return returns (float) version of the integer primitive type
-        */
-        INTEGER_API float toFloat() const ;
+                    /**
+                    * @brief returns the floating-point version of the respective integer
+                    * @return returns (float) version of the integer primitive type
+                    */
+                    float toFloat() const override ;
 
-        /**
-        * @brief returns the double version of the respective integer
-        * @return returns (double) version of the integer primitive type
-        */
-        INTEGER_API double toDouble() const ;
-        
-        /**
-        * @brief return as a std::string
-        * @return string version of integer
-        */
-        INTEGER_API std::string str();
-};
+                    /**
+                    * @brief returns the double version of the respective integer
+                    * @return returns (double) version of the integer primitive type
+                    */
+                    double toDouble() const override ;
+                    
+                    /**
+                    * @brief return as a std::string
+                    * @return string version of integer
+                    */
+                    std::string str() const ;
+            };
+        }
+    }
+}
 #endif
